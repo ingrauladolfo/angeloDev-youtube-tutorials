@@ -1,11 +1,12 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import { StoreProvider } from '../utils/Store'
 const MyApp = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />
+  return (
+    <StoreProvider>
+      <Component {...pageProps} />
+    </StoreProvider>
+  )
 }
-// function MyApp({ Component, pageProps }) {
-//   return <Component {...pageProps} />
-// }
 
 export default MyApp
